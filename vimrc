@@ -17,6 +17,7 @@ call pathogen#helptags()
 " Added 2010-09-21 Based on http://stevelosh.com/blog/2010/09/coming-home-to-vim
 " Set mapleader to ","
 let mapleader = ","
+<<<<<<< HEAD
 
 " vimcasts #24
 " Auto-reload vimrc on save

@@ -94,6 +94,13 @@ vnoremap <F1> <ESC>
 :nnoremap / /\v
 :vnoremap / /\v
 
+" Highlight Searches
+:set highlight=lub
+:map <Leader>s :set hlsearch<CR>
+:map <Leader>S :set nohlsearch<CR>
+:set incsearch
+:set showmatch
+
 " Execute last command over a visual selection
 :vnoremap . :norm.<CR>
 

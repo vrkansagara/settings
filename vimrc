@@ -1,7 +1,8 @@
 " Debug vim -U NONE -u ~/.vimrc
-"
+" Reset vim vim -u NONE -U NONE -N
 " Vim syntax file
 " Begin my settings!
+:set runtimepath+=~/.vim
 :set viminfo+=n~/.vim/viminfo
 
 " Disable the splash screen

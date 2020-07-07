@@ -1,5 +1,3 @@
-" Debug vim -U NONE -u ~/.vimrc
-" Reset vim vim -u NONE -U NONE -N
 " Vim syntax file
 " Begin my settings!
 :set runtimepath+=~/.vim
@@ -124,3 +122,21 @@ autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdd
 :map <Leader>S :set nohlsearch<CR>
 :set incsearch
 :set showmatch
+
+
+try
+source $HOME/.vim/config/vrkansagara.vim
+catch
+endtry
+
+" =========== @vrkansagara Custom confifuration @START========
+" Load personal vimrc in new tab with leader-v
+nmap <leader>p :tabedit $HOME/.vim/config/vrkansagara.vim<CR>
+" " Reload vimr configuration file
+nnoremap <Leader>r :source $MYVIMRC<CR>
+" =========== @vrkansagara Custom confifuration @END========
+
+
+
+
+

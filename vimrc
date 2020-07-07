@@ -1,5 +1,8 @@
+" Debug vim -U NONE -u ~/.vimrc
+"
 " Vim syntax file
 " Begin my settings!
+:set viminfo+=n~/.vim/viminfo
 
 " Disable the splash screen
 :set shortmess +=I

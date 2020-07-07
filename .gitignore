@@ -2,3 +2,4 @@ NERDTreeBookmarks
 .*.sw*
 .*.un~
 .netrwhist
+spell/*.spl

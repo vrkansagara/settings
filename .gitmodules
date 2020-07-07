@@ -4,3 +4,6 @@
 [submodule "airblade/vim-gitgutter"]
 	path = airblade/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "bufexplorer.zip"]
+	path = bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip

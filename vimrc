@@ -126,6 +126,7 @@ autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdd
 
 try
 source $HOME/.vim/config/vrkansagara.vim
+source $HOME/.vim/config/mwop.vim
 catch
 endtry
 

@@ -1,0 +1,6 @@
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+  url = https://github.com/preservim/nerdtree.git
+[submodule "bundle/vim-gitgutte"]
+	path = bundle/vim-gitgutte
+	url = https://github.com/airblade/vim-gitgutter

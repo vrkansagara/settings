@@ -1,21 +1,21 @@
-[submodule "bundle/preservim/nerdtree"]
-	path = bundle/preservim/nerdtree
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
 	url = git://github.com/preservim/nerdtree.git
-[submodule "bundle/vim-scripts/bufexplorer.zip"]
-	path = bundle/vim-scripts/bufexplorer.zip
+[submodule "bundle-scripts/bufexplorer.zip"]
+	path = bundle-scripts/bufexplorer.zip
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "bundle/airblade/vim-gitgutter"]
-	path = bundle/airblade/vim-gitgutter
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/mileszs/ack.vim"]
-	path = bundle/mileszs/ack.vim
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
-[submodule "bundle/altercation/vim-colors-solarized"]
-	path = bundle/altercation/vim-colors-solarized
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/kien/ctrlp.vim"]
-	path = bundle/kien/ctrlp.vim
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/tpope/vim-pathogen"]
-	path = bundle/tpope/vim-pathogen
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git

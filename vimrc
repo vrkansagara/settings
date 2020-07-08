@@ -1,7 +1,7 @@
 " Vim syntax file
 " Begin my settings!
 :set runtimepath+=~/.vim
-" :set viminfo+=n~/.vim/viminfo
+:set viminfo+=n~/.vim/viminfo
 
 " Disable the splash screen
 :set shortmess +=I
@@ -139,14 +139,15 @@ autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdd
 
 
 try
-source $HOME/.vim/config/vrkansagara.vim
-source $HOME/.vim/config/mwop.vim
-catch
+" Load all custom configuration for the vim.
+source $HOME/.vim/config/vim/vrkansagara.vim
+source $HOME/.vim/config/vim/mwop.vim
+catch /.*/
+    echo "Caught error: " . v:exception
 endtry
-
 " =========== @vrkansagara Custom confifuration @START========
 " Load personal vimrc in new tab with leader-v
-nmap <leader>p :tabedit $HOME/.vim/config/vrkansagara.vim<CR>
+nmap <leader>p :tabedit $HOME/.vim/config/vim/vrkansagara.vim<CR>
 " " Reload vimr configuration file
 nnoremap <Leader>r :source $MYVIMRC<CR>
 " =========== @vrkansagara Custom confifuration @END========

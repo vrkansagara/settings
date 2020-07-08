@@ -1,9 +1,15 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
     url = https://github.com/preservim/nerdtree.git
-[submodule "airblade/vim-gitgutter"]
-	path = airblade/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
 [submodule "bufexplorer.zip"]
 	path = bufexplorer.zip
 	url = https://github.com/vim-scripts/bufexplorer.zip
+[submodule "vim-gitgutter"]
+	path = vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "mileszs/ack.vim"]
+	path = mileszs/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "kien/ctrlp.vim"]
+	path = kien/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git

@@ -128,7 +128,7 @@ nnoremap <Space> za
 
 " Note: The "normal" command afterwards deletes an ugly pending line and moves
 " the cursor to the middle of the file.
-autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdd
+autocmd BufNewFile *.php 0r ~/.vim/skeletons/skeleton.php | normal Gdd
 
 " Highlight Searches
 :set highlight=lub

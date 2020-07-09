@@ -17,7 +17,7 @@
 :set complete+=kspell
 
 " press zg in normal mode of vim  to add cursor spelling into spell white list file.
-:set spellfile=~/.vim/spell/en.utf-8.add
+:set spellfile=~/.vim/config/spell/en.utf-8.add
 
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.php setlocal spell
@@ -55,4 +55,19 @@ map <leader>o :BufExplorer<cr>
 :set cursorline
 
 " Quickly find and open a file in the CWD
-    let g:ctrlp_map = '<C-f>'
+let g:ctrlp_map = '<C-f>'
+
+
+""""""""""""""""""""""""""""""
+" => pvim-colors-solarize plugin
+""""""""""""""""""""""""""""""
+syntax enable
+if has('gui_running')
+    set background=light
+    let g:solarized_termcolors=16
+else
+    set background=light
+    let g:solarized_termcolors=256
+endif
+colorscheme solarized
+

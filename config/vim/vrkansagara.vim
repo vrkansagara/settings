@@ -71,3 +71,37 @@ else
 endif
 colorscheme solarized
 
+
+" Sets how many lines of history VIM has to remember
+set history=700
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+
+"limit text lines to 80 characters. Will create new line when this is exceeded.
+set textwidth=80
+
+"will wrap lines longer than 80 char to new visual line
+set wrap
+
+"show the current row and column at the bottom of the screen
+set ruler
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => C / C++ language
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" run file with gcc CLI (CTRL-M)
+:autocmd FileType c noremap <C-M> :w!<CR>:!gcc % && ./a.out<CR>
+
+"use c indentation style and syntax highlighting for c, c++, and c0 files
+autocmd FileType c,cpp :set cindent
+autocmd FileType c,cpp :setf c
+autocmd FileType c,cpp :set expandtab
+au BufEnter *.c0 setf c
+au BufEnter *.c0 set cindent
+au BufEnter *.c0 set expandtab
+
+

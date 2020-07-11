@@ -1,8 +1,8 @@
 " PHP parser check (Leader + L)
-" :autocmd FileType php noremap <Leader>l :w!<CR>:!php -l %<CR>
+:autocmd FileType php noremap <Leader>l :w!<CR>:!php -l %<CR>
 
 " run file with PHP CLI (CTRL-M)
-" :autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
+:autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
 
 
 " :set lines=24
@@ -64,6 +64,8 @@ vnoremap <F1> <ESC>
 :nmap <C-w> :tabclose<CR>
 :imap <C-w> <ESC>:tabclose<CR>
 
+:nmap <C-Tab> :tabnew<CR>
+:imap <C-Tab> <ESC>:tabnew<CR>
 
 " Use UTF-8 encoding
 :set encoding=utf-8
@@ -76,7 +78,8 @@ set scrolljump=5
 set scrolloff=3
 
 " Map <leader>f to split horizontally, and move to bottom window
-" nnoremap <leader>f <C-w>s<C-w>j
+nnoremap <leader>h <C-w>s<C-w>j
+nnoremap <leader>v <C-w>v<C-w>l
 " Use <ctrl> plus direction key to move around within windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

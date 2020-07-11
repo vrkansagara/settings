@@ -31,8 +31,9 @@ let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=40
 map <leader><Space> :NERDTreeToggle<cr>
+nmap <leader>n :NERDTreeFind<CR>
 map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
+autocmd BufEnter * lcd %:p:h
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,4 +105,16 @@ au BufEnter *.c0 setf c
 au BufEnter *.c0 set cindent
 au BufEnter *.c0 set expandtab
 
+let g:termdebug_wide=1
+" Source the termdebug plugin
+packadd termdebug
 
+" Add mapping to load termdebug
+noremap <silent> <leader>td :Termdebug<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tab swtich
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Move open tab around with ctrl + left and right arrow
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>

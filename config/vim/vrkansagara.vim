@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM debug snippest
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -95,7 +94,11 @@ set ruler
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " run file with gcc CLI (CTRL-M)
-:autocmd FileType c noremap <C-M> :w!<CR>:!gcc % && ./a.out<CR>
+" -Wall to turn on all compiler warnings (this is usually a good idea):
+" It is a good idea to compile with -g flag to include debugging information in the executable:
+" "<" after "%" removes extension and dot (foo.c => foo), so "%<" is the file basename.
+"https://stackoverflow.com/questions/8946797/gcc-options-for-strictest-c-code
+:autocmd FileType c noremap <C-M> :w!<CR>:!gcc -g -Wall -Wextra -std=c89 -pedantic -Wmissing-prototypes -Wstrict-prototypes -Wold-style-definition % -o %< && clear && ./%<<CR>
 
 "use c indentation style and syntax highlighting for c, c++, and c0 files
 autocmd FileType c,cpp :set cindent
@@ -118,3 +121,10 @@ noremap <silent> <leader>td :Termdebug<cr>
 " Move open tab around with ctrl + left and right arrow
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctags edit's
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+nnoremap <leader>. :CtrlPTag<cr>
+

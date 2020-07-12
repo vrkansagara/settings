@@ -140,8 +140,8 @@ autocmd BufNewFile *.php 0r ~/.vim/skeletons/skeleton.php | normal Gdd
 
 try
 " Load all custom configuration for the vim.
-source $HOME/.vim/config/vim/vrkansagara.vim
 source $HOME/.vim/config/vim/mwop.vim
+source $HOME/.vim/config/vim/vrkansagara.vim
 catch /.*/
     echo "Caught error: " . v:exception
 endtry
@@ -151,4 +151,5 @@ nmap <leader>p :tabedit $HOME/.vim/config/vim/vrkansagara.vim<CR>
 " " Reload vimr configuration file
 nnoremap <Leader>r :source $MYVIMRC<CR>
 " =========== @vrkansagara Custom confifuration @END========
+
 

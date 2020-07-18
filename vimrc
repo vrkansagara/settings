@@ -34,23 +34,25 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 
 
 try
+    " Load functions
+    runtime ./config/functions/vim.vim
+    runtime ./config/functions/c.vim
+    
     " Load all custom configuration for the vim.
     "  source $HOME/.vim/config/vim/mwop.vim
     source $HOME/.vim/config/vim/vrkansagara.vim
-catch /.*/
-    echo "Caught error from(.vimrc): " . v:exception
-endtry
-" =========== @vrkansagara Custom confifuration @START========
 
-function! ExecuteLeader()
-    for f in split(glob('~/.vim/config/vim/*.vim'), '\n')
-        exe 'source' f
-    endfor
-endfunction
+catch /.*/
+
+    echo "Caught error from(.vimrc): " . v:exception
+
+endtry
+
+" =========== @vrkansagara Custom confifuration @START========
 
 " Load personal vimrc in new tab with leader-v
 nmap <leader>p :tabedit $HOME/.vim/config/vim/vrkansagara.vim<CR>
 " " Reload vimr configuration file
 " nnoremap <Leader>r :source $MYVIMRC<CR>
-nnoremap <Leader>r :call ExecuteLeader()<CR>
+nnoremap <Leader>r :call ReloadVimFiles()<CR>
 " =========== @vrkansagara Custom confifuration @END========

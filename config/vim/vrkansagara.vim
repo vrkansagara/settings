@@ -139,7 +139,7 @@ nnoremap <leader>. :CtrlPTag<cr>
 " "<" after "%" removes extension and dot (foo.c => foo), so "%<" is the file basename.
 "https://stackoverflow.com/questions/8946797/gcc-options-for-strictest-c-code
 " :autocmd FileType c noremap <C-M> :w!<CR>:!gcc -g -Wall -Wextra -std=c89 -pedantic -Wmissing-prototypes -Wstrict-prototypes -Wold-style-definition % -o %< && clear && ./%<<CR>
-:autocmd FileType c,h,cpp noremap <C-M> :w!<CR>:!gcc -g -Wall -Wextra -O2 -fomit-frame-pointer -std=gnu89 -pedantic -Wmissing-prototypes -Wstrict-prototypes -Wold-style-definition % && echo '-------------------------------------================------------------EDITED------\n' && ./a.out<CR>
+:autocmd FileType c,h,cpp noremap <C-M> :w!<CR>:!gcc -g -Wall -Wextra -O2 -fomit-frame-pointer -std=gnu89 -pedantic -Wmissing-prototypes -Wstrict-prototypes -Wold-style-definition % && echo '-----------------------------------------------------------------------------------------------------\n' && ./a.out<CR>
 
 "use c indentation style and syntax highlighting for c, c++, and c0 files
 autocmd FileType c,h,cpp :set cindent

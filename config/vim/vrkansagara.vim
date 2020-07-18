@@ -128,3 +128,32 @@ nnoremap <C-Right> :tabnext<CR>
 "
 nnoremap <leader>. :CtrlPTag<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => C / C++ language
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" run file with gcc CLI (CTRL-M)
+" -Wall to turn on all compiler warnings (this is usually a good idea):
+" It is a good idea to compile with -g flag to include debugging information in the executable:
+" "<" after "%" removes extension and dot (foo.c => foo), so "%<" is the file basename.
+"https://stackoverflow.com/questions/8946797/gcc-options-for-strictest-c-code
+" :autocmd FileType c noremap <C-M> :w!<CR>:!gcc -g -Wall -Wextra -std=c89 -pedantic -Wmissing-prototypes -Wstrict-prototypes -Wold-style-definition % -o %< && clear && ./%<<CR>
+:autocmd FileType c,h,cpp noremap <C-M> :w!<CR>:!gcc -g -Wall -Wextra -O2 -fomit-frame-pointer -std=gnu89 -pedantic -Wmissing-prototypes -Wstrict-prototypes -Wold-style-definition % && echo '-------------------------------------================------------------EDITED------\n' && ./a.out<CR>
+
+"use c indentation style and syntax highlighting for c, c++, and c0 files
+autocmd FileType c,h,cpp :set cindent
+autocmd FileType c,h,cpp :setf c
+autocmd FileType c,h,cpp :set expandtab
+au BufEnter *.c0 setf c
+au BufEnter *.c0 set cindent
+au BufEnter *.c0 set expandtab
+
+let g:termdebug_wide=1
+" Source the termdebug plugin
+packadd termdebug
+
+" Add mapping to load termdebug
+noremap <silent> <leader>td :Termdebug<cr>
+
+

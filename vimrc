@@ -39,7 +39,7 @@ try
     runtime ./config/functions/c.vim
     
     " Load all custom configuration for the vim.
-    "  source $HOME/.vim/config/vim/mwop.vim
+    source $HOME/.vim/config/vim/mwop.vim
     source $HOME/.vim/config/vim/vrkansagara.vim
 
 catch /.*/

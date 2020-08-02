@@ -85,6 +85,26 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 :nmap <C-Tab> :tabnew<CR>
 :imap <C-Tab> <ESC>:tabnew<CR>
 
+" This _may_ be needed to allow scrolling within tmux
+" :set ttymouse=xterm2
+
+" Turn on "very magic" regex status by default for searches.
+" :he /magic for more information
+:nnoremap / /\v
+:vnoremap / /\v
+
+" Highlight Searches
+:set highlight=lub
+:map <Leader>s :set hlsearch<CR>
+:map <Leader>S :set nohlsearch<CR>
+:set incsearch
+:set showmatch
+
+" Make case-insensitive search the norm
+:set ignorecase
+:set smartcase
+
+
 " Use UTF-8 encoding
 :set encoding=utf-8
 
@@ -151,3 +171,9 @@ let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_use_caching = 0
 " pair gutentags with ctrlp
 map <silent> <leader>jd :CtrlPTag<cr><c-\>w
+
+
+
+" Note: The "normal" command afterwards deletes an ugly pending line and moves
+" the cursor to the middle of the file.
+autocmd BufNewFile *.php 0r ~/.vim/skeleton.php | normal Gdd
